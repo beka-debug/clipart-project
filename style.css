@@ -1,5 +1,5 @@
 .slides{
-  width: 1312px;
+  max-width: 1312px;
   height: 760px;
   margin: auto;
   border-radius: 12px;
@@ -11,15 +11,103 @@
     
 }
 
-.x{
-    width: 100%;
-    height: 300px;
-    background-color: red;
-}
+
 .cont{
-    width: 1312px!important;
+    max-width: 1312px!important;
     margin: auto;
+    flex-wrap: wrap;
+    margin-top: 64px;
+    align-content: center ;
 }
-.middle {
-    padding:0px 20px;
+
+.left,.right{
+    width: 304px;
+    display: flex;
+    height: 519px;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.middle{
+    width: 604px;  
+    box-sizing: border-box;
+}
+
+.newscard{
+    width: 100%;
+    height: 244px;
+}
+.newscard img{
+    height: 150px;
+    
+}
+.middle-news-card{
+    height: 519px;
+}
+
+@media screen and (max-width:1350px){
+    .slides, .cont{
+        width: 1200px;
+    }
+    .left, .right{
+        width: 270px;
+    }
+    .middle{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:1240px){
+    .slides, .cont{
+        width: 1128px;
+    }
+    .slides{
+        height: 700px;
+    }
+    .left, .right{
+        width: 264px;
+    }
+    .middle{
+        width: 552px;
+    }
+}
+
+@media screen and (max-width:1170px){
+    .slides, .cont{
+        width: 1000px;
+    }
+    .slides{
+        height: 670px;
+    }
+    .left, .right{
+        width: 234px;
+    }
+    .middle{
+        width: 502px;
+    }
+}
+@media screen and (max-width:1024px){
+    .slides, .cont{
+        width: 928px;
+    }
+    .slides{
+        height: 560px;
+    }
+    .cont{
+        justify-content: center;
+    }
+    .left, .right{
+        width: 928px;
+        justify-content: space-between;
+        height: auto;
+    }
+    .middle{
+        width:928px;
+        height: 520px;
+        order:-1;
+    }
+    .newscard{
+       width: 448px;
+       margin-top: 32px;
+    }
+
 }

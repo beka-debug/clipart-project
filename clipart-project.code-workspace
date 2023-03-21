@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "clipart-project",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "clipart-project"
+	}
+}

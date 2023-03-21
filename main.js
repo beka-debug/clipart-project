@@ -17,8 +17,24 @@ class HTMLWorker {
         </swiper-slide>`;
   }
 
-  static getSideCard(){
-    return ``;
+  static getSideCard(item){
+    return `
+    <div class="w-full rounded w-full overflow-hidden shadow-lg newscard">
+    <img
+      class="w-full"
+      src="${item.imageSrc}"
+      alt="Sunset in the mountains"
+    />
+    <div class="px-6 py-4">
+      <p class="text-gray-700 text-base">
+        ${item.type} ${item.date}
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <h3>${item.description}</h3>
+    </div>
+  </div>
+    `;
   }
 
   static getMiddleCard(){
@@ -55,6 +71,7 @@ class CardItem {
 class ViewWorker {
   constructor() {
     this.renderSliderItems();
+    this.renderCardItems()
   }
 
   renderSliderItems() {
@@ -71,7 +88,24 @@ class ViewWorker {
   }
 
   renderCardItems(){
-
+    var newsItemsLeft = [
+      new CardItem("პოლიტიკა","18.04.2023","კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება","./News/Photo1.png"),
+      new CardItem("პოლიტიკა","18.04.2023","კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება","./News/Photo2.png")
+    ]
+    var newsItemsRight = [
+      new CardItem("პოლიტიკა","18.04.2023","კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება","./News/Photo3.png"),
+      new CardItem("პოლიტიკა","18.04.2023","კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით ემუქრება","./News/Photo4.png")
+    ]
+    var newsLeft = document.querySelector(".left")
+    var newsRight = document.querySelector(".right")
+    newsItemsLeft.forEach(item=>{
+      newsLeft.innerHTML += HTMLWorker.getSideCard(item)
+      console.log(item)
+    })
+    newsItemsRight.forEach(item=>{
+      newsRight.innerHTML += HTMLWorker.getSideCard(item)
+      console.log(item)
+    })
   }
 }
 
