@@ -7,58 +7,137 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <swiper-container>
-      <!-- slider items render area-->
-    </swiper-container>
-    <div
-      class="flex justify-between flex-wrap w-full cont"
-    >
-
-      <div class="left">
-      </div>
-
-      <div class="middle">
-        <div class="w-full rounded overflow-hidden shadow-lg middle-news-card">
-          <img
-            class="w-full"
-            src="./Sliders/Photo1.png"
-            alt="Sunset in the mountains"
-          />
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >#photography</span
-            >
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >#travel</span
-            >
-            <span
-              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >#winter</span
-            >
+    <header class="m-auto">
+      <section class="header-top m-auto flex items-center">
+        <ul class="flex w-full justify-between items-center">
+          <li class="icons-area flex">
+            <a href="#" class="no-underline">
+              <img src="./Icons/icon.svg" alt="">
+            </a>
+            <a href="#" class="no-underline">
+              <img src="./Icons/icon-1.svg" alt="">
+            </a>
+            <a href="#" class="no-underline">
+              <img src="./Icons/icon-2.svg" alt="">
+            </a>
+          </li>
+          <li class="company-logo">
+            <p>Company Logo</p>
+          </li>
+          <li class="">
+            <div class="search-input md:w-2/3 flex items-center justify-between">
+              <input type="text">
+              <img style="display: inline;" src="./Icons/search-icon.svg" alt="">
+            </div>
+          </li>
+        </ul>
+      </section>
+      <nav>
+        <div class="mx-auto">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+             <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+ 
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="hidden sm:block">
+                <div class="flex space-x-4 d-flex justify-between items-center">
+                  <a href="#" class="rounded-md">პოლიტიკა</a>
+                  <a href="#" class="rounded-md">საზოგადოება</a>
+                  <a href="#" class="rounded-md">Covid-19</a>
+                  <a href="#" class="rounded-md">სამართალი</a>
+                  <a href="#" class="rounded-md">ბიზნესი & ეკონომიკა</a>
+                  <a href="#" class="rounded-md disappear">კრიმინალი</a>
+                  <a href="#" class="rounded-md disappear">შემთხვევა</a>
+                  <a href="#" class="rounded-md disappear">მსოფლიო</a>
+                  <div class="flex justify-center show">
+                    <div>
+                      <div class="relative" data-te-dropdown-ref>
+                        <a class="flex items-center whitespace-nowrap" href="#" type="button" id="dropdownMenuButton2"
+                          data-te-dropdown-toggle-ref aria-expanded="false" data-te-ripple-init
+                          data-te-ripple-color="light">
+                          მეტი
+                          <span class="ml-2 w-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                              class="h-5 w-5">
+                              <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </a>
+                        <ul
+                          class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg [&[data-te-dropdown-show]]:block"
+                          aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
+                          <li>
+                            <a href="#"
+                              class="rounded-md block w-full whitespace-nowrap py-2 px-4 text-sm font-normal">სპორტი</a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              class="rounded-md block w-full whitespace-nowrap py-2 px-4 text-sm font-normal">რელიგია</a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              class="rounded-md block w-full whitespace-nowrap py-2 px-4 text-sm font-normal">ხელოვნება</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        </div>
+      </nav>
+    </header>
+    <div class="swiper mt-8">
+      <div class="swiper-wrapper"></div>
+      <div id="btns">
+        <div class="swiper-button-prev" ></div>
+        <div class="swiper-button-next"></div>
       </div>
-
-      <div class="right">
-        
-       
-      </div>
-
     </div>
 
+    <div class="flex justify-between flex-wrap w-full cont">
+      <div class="left"></div>
+
+      <div class="middle">
+      
+      </div>
+
+      <div class="right"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>
